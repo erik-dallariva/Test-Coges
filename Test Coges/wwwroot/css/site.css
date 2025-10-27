@@ -1,0 +1,79 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.wrapper {
+    border: 2px solid black; /*Bordi neri spessi 2 pixel*/
+    border-radius: 20px; /*Arrotondo i bordi di 20 pixel*/
+    text-align: center; /*Allineo il componente al centro della pagina*/
+    width: 500px; /*lunghezza 500 pixel*/
+    margin-top: 50px; /*creo uno spazio vuoto di 50 pixel sopra all'esterno del componente*/
+    margin-bottom: 50px; /*creo uno spazio vuoto di 50 pixel sotto all'esterno del componente*/
+    padding-top: 30px; /*creo uno spazio vuoto di 50 pixel sopra all'interno del componente*/
+    padding-bottom: 30px; /*creo uno spazio vuoto di 50 pixel sotto all'interno del componente*/
+}
+
+.block {
+    display: flex; /*Dispone gli elementi interni orizzontalmente*/
+    justify-content: center; /*Centra gli elementi orizzontalmente all'interno del blocco*/
+    align-items: center; /* Allineamento verticale */
+    gap: 10px; /* Spazio di 10 pixel tra gli elementi */
+    margin-bottom: 10px; /*creo uno spazio vuoto di 10 pixel sotto all'esterno del componente*/
+}
+/*style="display: flex; justify-content: center; align-items: center; gap: 10px;*/
+.input {
+    width: 300px; /* Larghezza del campo di input */
+    border-radius: 3px; /*Arrotondo i bordi di 3 pixel*/
+}
+
+.btn {
+    width: 90px; /* Larghezza del pulsante di 90 pixel */
+    height: 30px; /* Altezza del pulsante di 30 pixel */
+    border-radius: 10px; /*Arrotondo i bordi di 10 pixel*/
+    background-color: aqua; /* Colore di sfondo azzurro */
+    border: 2px solid black; /*Bordi neri spessi 2 pixel*/
+    cursor: pointer; /* Mostra la mano quando si passa sopra il pulsante */
+}
+
+.qblock {
+    display: flex; /* Dispone gli elementi interni orizzontalmente */
+    justify-content: center; /* Centra gli elementi orizzontalmente all'interno del blocco */
+    align-items: center; /* Allinea verticalmente */
+    gap: 100px; /* Spazio di 100 pixel tra gli elementi */
+    margin-top: 30px; /* creo uno spazio vuoto di 30 pixel sotto all'esterno del componente */
+}
+
+.answer {
+    width: 150px; /* Larghezza di ogni pulsante di 150 pixel*/
+    height: 40px; /* Altezza di ogni pulsante di 40 pixel */
+    border-radius: 5px; /*Arrotondo i bordi di 5 pixel*/
+    cursor: pointer; /* Mostra la mano quando si passa sopra il pulsante */
+    background-color: #bfbdbb; /* Colore di sfondo grigio chiaro */
+}
+
+.selected {
+    width: 150px; /* Larghezza di ogni pulsante di 150 pixel*/
+    height: 40px; /* Altezza di ogni pulsante di 40 pixel */
+    border-radius: 5px; /*Arrotondo i bordi di 5 pixel*/
+    cursor: pointer; /* Mostra la mano quando si passa sopra il pulsante */
+    background-color: #4cafa8; /* Colore di sfondo verde acqua per evidenziare la risposta selezionata */
+}

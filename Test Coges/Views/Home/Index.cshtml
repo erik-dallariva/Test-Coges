@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Test Coges";
+}
+<form id="login" method="post"> <!--Form per inserire nome e materia-->
+    <div class="wrapper mx-auto"> <!--creo un contenitore per tutti i componenti-->
+        <h1 class="display-4"><b>Test Task</b></h1> <!--Inserisco un titolo-->
+        <br />
+        <div class="block"> <!--creo un contenitore per l'input-->
+            <input type="text" placeholder="Inserisci nome..." class="input" id="txtbox" /> <!--Inserisco un input text-->
+        </div>
+        <div class="block"> <!--creo un contenitore per l'input della materia-->
+            <select class="input" id="cmbbox"> <!--Inserisco una select con le varie opzioni-->
+                <option>Scegli la tematica...</option>
+                <option>Matematica</option>
+                <option>Storia</option>
+                <option>Geografia</option>
+            </select>
+        </div>
+        <div class="block"> <!--creo un contenitore per l'input button-->
+            <input type="button" id="btn" value="Inizia" class="btn" /> <!--Inserisco un bottone per cambiare form-->
+        </div>
+    </div>
+</form>
+
+<form id="test" method="post" style="display: none"> <!--Form per rispondere alle domande-->
+    <div class="wrapper mx-auto"> <!--contenitore per tutti i componenti-->
+        <h1 id="titolo">Questions</h1> <!--Inserisco il titolo-->
+        <p id="question">Domanda che si deve rispondere</p> <!--Inserisco un paragrafo per le domande-->
+        <div class="qblock"> <!--contenitore per 2 pulsanti orizzontali-->
+            <input type="button" class="answer" id="btn1" value="Risposta 1" /> <!--Inserisco un pulsante-->
+            <input type="button" class="answer" id="btn2" value="Risposta 2" /> <!--Inserisco un pulsante-->
+        </div>
+        <div class="qblock"> <!--contenitore per 2 pulsanti orizzontali-->
+            <input type="button" class="answer" id="btn3" value="Risposta 3" /> <!--Inserisco un pulsante-->
+            <input type="button" class="answer" id="btn4" value="Risposta 4" /> <!--Inserisco un pulsante-->
+        </div>
+        <br />
+        <br />
+        <progress id="progressbar" value="0" max="100">0</progress> <!--Inserisco una progressbar-->
+        <br />
+        <br />
+        <input type="button" id="btninvio" value="Prosegui" /> <!--Inserisco un bottone per cambiare form-->
+    </div>
+</form>
+
+<form id="resultForm" method="post" style="display:none"> <!--Form che stampa gli esiti-->
+    <div class="wrapper mx-auto"> <!--contenitore per tutti i componenti-->
+        <h1 id="resultTitle">Risultati</h1> <!--Inserisco titolo-->
+        <p id="resultText"></p> <!--Inserisco paragrafo con i risultati-->
+    </div>
+</form>
+
+
+
+@section Scripts {
+    <script src="~/js/Login.js"></script>
+    <script src="~/js/Test.js"></script>
+    <script src="~/js/Result.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. CREA L'ISTANZA DELLA CLASSE RESULT
+            const resultManager = new Result('resultForm');
+
+            // 2. CREA L'ISTANZA DELLA CLASSE TEST e PASSA L'ISTANZA DEL RESULT
+            const testManager = new Test('test', resultManager);
+
+            // 2. CREA L'ISTANZA DI LOGIN e PASSA L'ISTANZA DEL TEST
+            const loginManager = new Login('login',testManager);
+        });
+    </script>
+}
