@@ -1,1 +1,3 @@
 Elaborato con la finalità di creare una applicazione desktop full stack, attraverso l'utilizzo di HTML e CSS per lo sviluppo front end del sito web mentre per il back end ho utilizzato JavaScript per il funzionamento del sito e C# per la logica di inserimento dei dati su MongoDB.
+Il Sito web era composto da una pagina di login, una volta che si va avanti si apre un form con delle domande a risposta singola o multipla e infine si apre un'ultima pagina dove stampo i risultati e anche in nome inserito nel primo form.
+Purtroppo non funziona il database in quanto non sono riuscito a implementare correttamente l'algoritmo di creazione di una tabella.
