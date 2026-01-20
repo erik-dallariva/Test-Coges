@@ -1,1 +1,1 @@
-Buonasera, ho inserito tutto quello che sono riuscito a sviluppare su questo repository. Volevo fare solo una precisazione in quanto non mi funziona la parte di salvataggio dei dati sul DataBase.
+Elaborato con la finalità di creare una applicazione desktop full stack, attraverso l'utilizzo di HTML e CSS per lo sviluppo front end del sito web mentre per il back end ho utilizzato JavaScript per il funzionamento del sito e C# per la logica di inserimento dei dati su MongoDB.
